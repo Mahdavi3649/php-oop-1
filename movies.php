@@ -5,7 +5,7 @@ include __DIR__ . '/layout/header.php'; ?>
 
 
 <main>
-    <?php include __DIR__ . '/partials/jumbo_welcome.php'?>
+    <?php include __DIR__ . '/partials/jumbo_movies.php'?>
 
     <div class="container">
 
