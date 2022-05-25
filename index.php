@@ -51,7 +51,7 @@ $Irreversible = new Movie('Irreversible', 'drama', 'Gaspar Noe','2002', 'https:/
 $ThePianoTeacher = new Movie('The Piano Teacher', 'drama', 'Michael Haneke','2001', 'https://m.media-amazon.com/images/I/516NC1CW6BL._AC_SY445_.jpg'); 
 
 $TheCelebration = new Movie('The Celebration', 'drama', 'Thomas Vinterberg','1998', 'https://m.media-amazon.com/images/I/513ZEP3CM6L.jpg'); 
-//var_dump($Oldboy, $Irreversible);
+//var_dump($Oldboy, $Irreversible, $ThePianoTeacher,$TheCelebration);
 
 
 $movies = [];
@@ -71,7 +71,7 @@ array_push($movies, $Oldboy, $Irreversible, $ThePianoTeacher,$TheCelebration);
     <title>Array di oggetti</title>
     <style>
         body{
-            background-color: #b6dbc5;
+            background-color: #8a5165;
         }
     </style>
 </head>
