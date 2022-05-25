@@ -26,13 +26,38 @@ class Movie {
         $this->img = $img;
     }
 
+    public function getTitle(){
+        return $this->title;
+    }
+    public function getGenre(){
+        return $this->genre;
+    }
+    public function getDirecter(){
+        return $this->directer;
+    }
+    public function getYear(){
+        return $this->year;
+    }
+    public function getImage(){
+        return $this->img;
+    }
+
 }
 
 $Oldboy = new Movie('Oldboy', 'neo-noir action', 'Chan Wook Park','2003','https://www.umanitaria.it/images/Alghero/AttivitaCulturali/CDTM/Oldboy._Locandina.jpg'); 
 
 $Irreversible = new Movie('Irreversible', 'drama', 'Gaspar Noe','2002', 'https://www.ilcineocchio.it/cine/wp-content/uploads/2019/09/Irreversible-film-poster-2002.jpg'); 
+
+$ThePianoTeacher = new Movie('The Piano Teacher', 'drama', 'Michael Haneke','2001', 'https://m.media-amazon.com/images/I/516NC1CW6BL._AC_SY445_.jpg'); 
+
+$TheCelebration = new Movie('The Celebration', 'drama', 'Thomas Vinterberg','1998', 'https://m.media-amazon.com/images/I/513ZEP3CM6L.jpg'); 
 //var_dump($Oldboy, $Irreversible);
 
+
+$movies = [];
+array_push($movies, $Oldboy, $Irreversible, $ThePianoTeacher,$TheCelebration);
+
+//var_dump($movies);
 
 ?>
 
@@ -49,29 +74,22 @@ $Irreversible = new Movie('Irreversible', 'drama', 'Gaspar Noe','2002', 'https:/
 
 <div class="container">
     <div class="row mt-5">
-        <div class="col">
-            <div class="card" style="width: 16rem;">
-                <img class="card-img-top" src="<?php echo $Oldboy->img; ?>" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $Oldboy->title; ?></h5>
-                        <h6 ><?php echo $Oldboy->genre; ?></h6>
-                        <h5 ><?php echo $Oldboy->directer; ?></h5>
-                        <p><?php echo $Oldboy->year; ?></p>
-                    </div>
-             </div>
-        </div>
 
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                 <img class="card-img-top" src="<?php echo $Irreversible->img; ?>" alt="Card image cap">
-                    <div class="card-body">
-                    <h3 class="card-title"><?=$Irreversible->title; ?></h3>
-                        <h6 ><?php echo $Irreversible->genre; ?></h6>
-                        <h5 ><?php echo $Irreversible->directer; ?></h5>
-                        <p><?php echo $Irreversible->year; ?></p>
+        <?php foreach($movies as $movie) { ?>
+
+                <div class="col-3">
+                    <div class="card" style="width: 15rem;">
+                        <img src="<?php echo $movie->getImage(); ?>">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $movie->getTitle(); ?></h5>
+                                <h6 ><?php echo $movie->getGenre(); ?></h6>
+                                <h5 ><?php echo $movie->getDirecter(); ?></h5>
+                                <p><?php echo $movie->getYear(); ?></p>
+                            </div>
                     </div>
-             </div>
-        </div>
+                </div>
+
+            <?php } ?>
 
     </div>
 </div>
