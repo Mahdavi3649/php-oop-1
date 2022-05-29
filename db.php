@@ -10,53 +10,19 @@
  */
 
 
-class Movie {
+require __DIR__ . '/Models/Movie.php';
 
-    public $title;
-    public $genre;
-    public $directer;
-    public $year;
-    public $img;
+$movies = [
 
-    public function __construct(String $title, String $genre, String $directer, int $year, $img) {
-        $this->title = $title;
-        $this->genre = $genre;
-        $this->directer = $directer;
-        $this->year = $year;
-        $this->img = $img;
-    }
-
-    public function getTitle(){
-        return $this->title;
-    }
-    public function getGenre(){
-        return $this->genre;
-    }
-    public function getDirecter(){
-        return $this->directer;
-    }
-    public function getYear(){
-        return $this->year;
-    }
-    public function getImage(){
-        return $this->img;
-    }
-
-}
-
-$Oldboy = new Movie('Oldboy', 'neo-noir action', 'Chan Wook Park','2003','https://www.umanitaria.it/images/Alghero/AttivitaCulturali/CDTM/Oldboy._Locandina.jpg'); 
-
-$Irreversible = new Movie('Irreversible', 'drama', 'Gaspar Noe','2002', 'https://www.ilcineocchio.it/cine/wp-content/uploads/2019/09/Irreversible-film-poster-2002.jpg'); 
-
-$ThePianoTeacher = new Movie('The Piano Teacher', 'drama', 'Michael Haneke','2001', 'https://m.media-amazon.com/images/I/516NC1CW6BL._AC_SY445_.jpg'); 
-
-$TheCelebration = new Movie('The Celebration', 'drama', 'Thomas Vinterberg','1998', 'https://m.media-amazon.com/images/I/513ZEP3CM6L.jpg'); 
-//var_dump($Oldboy, $Irreversible, $ThePianoTeacher,$TheCelebration);
-
-
-$movies = [];
-array_push($movies, $Oldboy, $Irreversible, $ThePianoTeacher,$TheCelebration);
-
-//var_dump($movies);
+    new Movie('Oldboy','drama','Chand Wook Park','2001','https://m.media-amazon.com/images/M/MV5BMTI3NTQyMzU5M15BMl5BanBnXkFtZTcwMTM2MjgyMQ@@._V1_FMjpg_UX1000_.jpg'),
+    new Movie('Dogville','drama','Lars Van Trier','2010','https://m.media-amazon.com/images/M/MV5BMTkwNTg2MTI1NF5BMl5BanBnXkFtZTcwMDM1MzUyMQ@@._V1_.jpg'),
+    new Movie('Happy End','drama','Michael Haneke','2018','https://m.media-amazon.com/images/I/8168hk7mkbL._SL1500_.jpg'),
+    new Movie('Enter the Void','action','Gaspar Noe','2015','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdk8mKNFiQcmuZspSgMtywni5KTGgyfyhnSDkIMaEA0Kh9khCJcemBaKJlgm-KayPxuC4&usqp=CAU'),
+    new Movie('White wibbon','drama','Michael haneke','2010','https://m.media-amazon.com/images/M/MV5BMTQ2OTYyNzUxOF5BMl5BanBnXkFtZTcwMzUwMDY4Mg@@._V1_.jpg'),
+    new Movie('Papillon','action','Michael Noer','2011','https://m.media-amazon.com/images/M/MV5BNzNiYzJmOWQtOTg0Ny00ZWU3LWI0ZjktOTQxNTJhNGNhYzg1XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_.jpg'),
+    new Movie('3-Iron','action','Kim Ki duk','2008','https://upload.wikimedia.org/wikipedia/en/7/70/3-Iron_%282004%29_poster.jpg'),
+    new Movie('I stand Alone','dram','Gaspar Noe','2013','https://m.media-amazon.com/images/M/MV5BMmMyYzRjYjMtYzFkNy00Njc3LWIzOTQtNzIzNzE4YzM4NDNiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg'),
+   
+   ]
 
 ?>
